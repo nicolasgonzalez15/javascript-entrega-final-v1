@@ -10,7 +10,7 @@ Proyecto con sitio web de proyecto final para curso Javascript de Tecno 3F
 * Sección Principal, con detalle de sitio
 * Sección Temáticas, con tópicos del sitio
 * Sección API - Utilizando API de Rick and Morty - Buscador de personajes
-* Sección contacto - Formulario dinámico con JS
+* Sección contacto - Formulario dinámico con JS (valida campos vacíos - error email - envío de formulario con datos correctos/incorrectos/vacíos)
 
 ## Contacto
 * Mail: nicolas.gonzalez15@gmail.com
