@@ -1,0 +1,378 @@
+/* PALETA DE COLORES TEMÁTICA PELÍCULAS (Oscuro con Acentos Brillantes) */
+:root {
+    --color-bg-principal: #1c1c1c;    /* Negro oscuro (Fondo principal, Cine) */
+    --color-bg-secundario: #252525;   /* Gris oscuro (Fondo de secciones/cards) */
+    --color-header-footer: #0a0a0a;   /* Negro profundo (Header/Footer principal) */
+    --color-acento-principal: #ffc72c; /* Dorado/Amarillo de Acento (Botones, Títulos) */
+    --color-acento-hover: #e0ac00;     /* Dorado Oscuro (Hover de botones) */
+    --color-texto-oscuro: #ebebeb;    /* Blanco casi puro (Texto principal) */
+    --color-texto-claro: #1c1c1c;     /* Negro (Texto en fondos claros) */
+    --color-borde: #444444;           /* Gris oscuro medio (Bordes de input/cards) */
+    --color-resalte-extra: #e50914;   /* Rojo de película (Para errores o énfasis extra) */
+}
+
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Fondo principal: Negro oscuro */
+    background-color: var(--color-bg-principal); 
+    /* Texto principal: Blanco casi puro */
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    /* Títulos: Dorado/Amarillo de Acento */
+    color: var(--color-acento-principal);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    /* Botón: Rojo de Película */
+    background-color: var(--color-resalte-extra); 
+    /* Texto: Blanco */
+    color: var(--color-texto-oscuro);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    /* Botón Hover: Rojo de Película más oscuro */
+    background-color: #b20712; 
+    transform: translateY(-2px);
+}
+
+/* HEADER */
+header {
+    /* Fondo Header: Negro profundo */
+    background-color: var(--color-header-footer);
+    /* Texto: Blanco */
+    color: var(--color-texto-oscuro);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4); /* Sombra más oscura */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    /* Texto: Blanco */
+    color: var(--color-texto-oscuro);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    /* Link Hover: Dorado */
+    color: var(--color-acento-principal);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    /* Color Toggle: Blanco */
+    color: var(--color-texto-oscuro);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* SECCIÓN PRINCIPAL */
+#inicio {
+    /* Degradado de fondo con el color de cine */
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), 
+                url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+    /* Texto: Blanco */
+    color: var(--color-texto-oscuro);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    /* Título: Dorado */
+    color: var(--color-acento-principal);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Sección tematicas*/
+/*------------------------------------------------*/
+
+.tematicas h2{
+    text-align: center;
+    
+}
+.container-items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:1rem;
+    align-content: space-around;
+    height: auto;
+    padding:3rem;
+    color: #000;
+}
+
+.item{
+    flex:1 1 30%;
+    min-width: 200px;
+    padding: 3rem;
+    margin:1rem;
+    background-color:#E8E1E1;
+    border-radius: 5px;
+    box-shadow: rgba(44, 42, 42, 0.35) 0px 5px 15px;
+    transition: transform 0.3s ease;
+}
+
+.item h2{
+    padding:2rem;
+    margin-bottom: 5px;
+}
+
+.item:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(44, 42, 42, 0.35) 0px 5px 15px;
+    /*box-shadow: 0 27px 14px 5px rgba(0, 0, 0, 0.15);*/
+    color: #fff;
+    text-shadow: 2px 2px grey;
+}
+
+
+
+/* SECCIÓN API */
+#api {
+    /* Fondo: Gris oscuro */
+    background-color: var(--color-bg-secundario);
+}
+
+.api-container {
+    text-align: center;
+}
+
+.api-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.api-item {
+    /* Fondo Item: Negro oscuro */
+    background-color: var(--color-bg-principal);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.api-item:hover {
+    transform: translateY(-5px);
+}
+
+.api-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* SECCIÓN FORMULARIO */
+#formulario {
+    /* Fondo Formulario: Negro oscuro */
+    background-color: var(--color-bg-principal);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    /* Fondo: Gris oscuro */
+    background-color: var(--color-bg-secundario);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    /* Texto Label: Dorado */
+    color: var(--color-acento-principal); 
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px 15px;
+    /* Fondo Input: Negro oscuro */
+    /*background-color: #1a1a1a; */
+    /* Borde: Gris oscuro medio */
+    border: 1px solid var(--color-borde);
+    /* Texto dentro del input: Blanco */
+    color:#000000;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    /* Borde en foco: Dorado */
+    border-color: var(--color-acento-principal);
+}
+
+.error {
+    /* Color Error: Rojo */
+    color: var(--color-resalte-extra); 
+    font-size: 0.85rem;
+    margin-top: 5px;
+    /*display: none;*/
+}
+
+.success-message {
+    /* Color Éxito: Verde oscuro (similar a un certificado) */
+    background-color: #2e7d32; 
+    /* Color Texto Éxito: Blanco */
+    color: var(--color-texto-oscuro);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    /* Fondo Footer: Negro profundo */
+    background-color: var(--color-header-footer);
+    /* Texto: Blanco */
+    color: var(--color-texto-oscuro);
+    padding: 30px 0;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    /* ... (Resto de estilos responsive sin cambios de color) ... */
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+}
+
+/* EJEMPLOS DE COLORES POR TEMÁTICA (ELIMINADOS o Adaptados si fuera necesario, pero mantenidos para la estructura) */
+/* Se eliminaron los estilos temáticos no relacionados ya que la paleta general cubre el tema 'Películas' */
+.viajes .btn, .viajes header,
+.recetas .btn, .recetas header,
+.peliculas .btn, .peliculas header,
+.videojuegos .btn, .videojuegos header {
+    /* Usar la paleta general o adaptar si se desea un subtema */
+    background-color: var(--color-resalte-extra); 
+}
+
+.viajes .btn:hover,
+.recetas .btn:hover,
+.peliculas .btn:hover,
+.videojuegos .btn:hover {
+    background-color: #b20712; 
+}

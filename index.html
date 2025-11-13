@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-api.css">
+    <link rel="shortcut icon" href="cine.png" type="image/x-icon">
+    <title>Películas, series y más</title>
+</head>
+<body>
+    <body>
+    <!-- HEADER -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">Películas, series y más</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#tematicas">Temáticas</a></li>
+                    <li><a href="#api">API Rick and Morty</a></li>
+                    <li><a href="#formulario">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bienvenido al sitio de películas, series y más</h1>
+                <p>Películas, Series y todo lo que te apasiona. El destino definitivo para los amantes del cine. Explora, descubre y conoce sin límites. </p>
+                <a href="#api" class="btn">Explorar Más</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tematicas" class="tematicas">
+            <h2>Temáticas</h2>
+            <div class="container-items">
+                <div class="item">
+                    <h3>Películas</h3>
+                    <p>Tu fuente ideal para noticias, críticas y sugerencias cinematográficas. ¡Encuentra tu próxima película favorita con nuestras recomendaciones de estrenos y clásicos!</p>
+                </div>
+                <div class="item">
+                    <h3>Series</h3>
+                    <p>Explora el ranking de las series más vistas del momento. Descubre las producciones que están rompiendo récords y las tendencias de la televisión global. ¡No te quedes atrás!</p>
+                </div>
+                <div class="item">
+                    <h3>Estrenos</h3>
+                    <p>¡No te pierdas los últimos estrenos! Las nuevas películas más esperadas y las series de televisión que acaban de llegar a plataformas. ¡Descubre ya lo nuevo en la pantalla grande y chica!</p>
+                </div>
+                <div class="item">
+                    <h3>Estrellas</h3>
+                    <p>Sigue de cerca a las estrellas de cine más brillantes. Entérate de sus próximos proyectos, noticias exclusivas y todo sobre los actores y actrices que definen la industria del cine actual.</p>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- SECCIÓN API -->
+    <section id="api">
+          <div class="container-api">
+            <h1>🔍 Rick and Morty - Personajes</h1>
+            <p>Ingresá un ID válido (1-826)</p>
+            <div class="buscador">
+            <input type="text" id="nombrePersonaje" placeholder="Escribí el id de un personaje de Rick and Morty...">
+            <button id="buscarBtn">Buscar</button>
+            </div>
+
+            <div id="resultado" class="resultado">
+            <div class="placeholder"> Escribí el id de un personaje y presioná “Buscar”</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO -->
+    <section id="formulario">
+        <div class="container">
+            <div class="form-container">
+                <h2>Formulario de Contacto</h2>
+                <p>Completa el formulario para ponerte en contacto con nosotros.</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Nicolás González" class="box">
+                        <div class="error" id="errorNombre"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="Ej: mail@dominio.com" class="box">
+                        <div class="error" id="errorEmail"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" class="box">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="problema">Reportar problema</option>
+                        </select>
+                        <div class="error" id="errorAsunto"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Aqui van tus comentarios..." class="box"></textarea>
+                        <div class="error" id="errorMensaje"></div>
+                    </div>
+                    <button type="submit" class="boton">Enviar Mensaje</button>
+                </form>
+                
+                <div class="success-message" id="successMessage">
+                    ¡Gracias por tu mensaje! Te contactaremos pronto.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 NINODEV. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="api-rick-morty.js"></script>
+    <script src="formulario.js"></script>
+</body>
+</html>

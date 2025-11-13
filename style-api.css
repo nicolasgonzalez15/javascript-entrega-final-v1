@@ -1,0 +1,123 @@
+:root {
+  --bg1: #fdf6f0;       /* Fondo principal: crema suave */
+  --bg2: #e3f2fd;       /* Fondo secundario: azul pastel */
+  --accent: #ffb3c1;    /* Acento principal: rosa pastel */
+  --accent2: #a0e7e5;   /* Acento secundario: turquesa pastel */
+  --text: #4a4a4a;      /* Texto: gris oscuro suave */
+  --muted: #b0bec5;     /* Texto secundario: gris pastel */
+}
+
+
+.container-api {
+    /* PROPIEDADES INNECESARIAS ELIMINADAS: text-align: center; y align-items: center; */
+    
+    /* Centrado Horizontal: Se maneja con `margin: 0 auto;` para un ancho fijo/porcentual */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+    width: 90%;
+    /*max-width: 1200px; /* Es bueno mantener un max-width */
+    
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* ===== Buscador ===== */
+.buscador {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 10px;
+  width: 60%;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Resultado ===== */
+.resultado {
+    /* Usar flexbox para centrar el placeholder verticalmente cuando está solo */
+   display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+   min-height: 250px;
+    gap: 20px; /* Espacio entre las tarjetas */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.placeholder {
+ color: var(--muted);
+    /* Asegura que el placeholder se vea centrado en línea */
+    text-align: center; 
+}
+
+/* Card Personaje */
+.personaje-card {
+    /* 1. CENTRADO DE CONTENIDO: */
+    text-align: center; 
+    
+    /* 2. CENTRADO DE LA TARJETA MISMA (horizontal, si no usa width: 100%) */
+ margin: 0 auto; 
+    
+ background: rgba(255, 255, 255, 0.05);
+ padding: 1.5rem;
+ border-radius: 15px;
+ box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+ animation: fadeIn 0.4s ease-in-out;
+}
+
+.personaje-card img {
+ width: 150px;
+ height: 150px;
+ object-fit: contain;
+ animation: float 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.personaje-card h2 {
+  margin: 10px 0 5px;
+}
+
+.personaje-stats {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
